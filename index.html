@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css" class="style">
+	<link rel="stylesheet" href="header.css" class="style">
+	<link rel="stylesheet" href="categories.css" class="style">
+	<link rel="stylesheet" href="price.css" class="style">
+	<link rel="stylesheet" href="benefits.css" class="style">
+	<link rel="stylesheet" href="accordion.css" class="style">
+	<link rel="stylesheet" href="popup.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<style type="text/css">
+		.slider-section {
+			width: 100%;
+			height: calc(100vh - 150px);
+		}
+		.slider-wrapper {
+			height: 100%;
+		}
+		.card {
+			padding: 30px;
+			background-color: lawngreen;
+			height: 80vh;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			position: relative;
+		}
+		.slider-container {
+			width: 100%;
+			height: 100%;
+		}
+		.swiper-container {
+			overflow: hidden;
+		}
+		.card-text {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		.card-text h3, .card-text p {
+			font-family: 'Wix Madefor Display', sans-serif;
+			font-size: 80px;
+			color: black;
+			background-color: yellow;
+			padding: 20px 30px;
+			width: fit-content;
+			font-weight: 500;
+		}
+		@media screen and (min-width: 320px) and (max-width: 768px) {
+			.card-text h3 {
+				font-size: calc(30px + 50 * ((100vw - 320px) / 448));
+			}
+		}
+		.swiper-slide[aria-label="1 / 4"] {
+			background-image: url(https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+		}
+		.swiper-slide[aria-label="2 / 4"] {
+			background-image: url(https://images.unsplash.com/photo-1549927681-0b673b8243ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+		}
+		.swiper-slide[aria-label="3 / 4"] {
+			background-image: url(https://images.unsplash.com/photo-1590362891991-f776e747a588?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80);
+		}
+		.swiper-slide[aria-label="4 / 4"] {
+			background-image: url(https://images.unsplash.com/photo-1541443131876-44b03de101c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+		}
+	</style>
+</head>
+<body>
+	<header class="header flex">
+		<div class="header-wrapper wrapper flex">
+			<div class="header-logo">
+				<img src="logo.svg" alt="logo">
+			</div>
+			<nav class="header-navbar-menu flex">
+				<a href="#" class="header-navbar-menu-item">про нас</a>
+				<a href="#" class="header-navbar-menu-item">ціни</a>
+				<a href="#" class="header-navbar-menu-item">категорії</a>
+				<a href="#benefits" class="header-navbar-menu-item">переваги</a>
+				<a href="#qa" class="header-navbar-menu-item">відповіді на питання</a>
+			</nav>
+			<div class="header-burger-handler">
+				<div class="burger-item"></div>
+			</div>
+		</div> 
+	</header>
+	<div class="mobile-menu flex">
+		<div class="mobile-menu-wrapper wrapper flex">
+			<nav class="mobile-navbar-menu flex">
+				<a href="#" class="mobile-navbar-menu-item">про нас</a>
+				<a href="#" class="mobile-navbar-menu-item">ціни</a>
+				<a href="#" class="mobile-navbar-menu-item">категорії</a>
+				<a href="#benefits" class="mobile-navbar-menu-item">переваги</a>
+				<a href="#qa" class="mobile-navbar-menu-item">відповіді на питання</a>
+			</nav>
+		</div>
+	</div>
+	<section class="slider-section flex">
+		<div class="slider-wrapper wrapper">
+			<div class="slider-container">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide card">
+							<div class="card-text">
+								<h3>ЗАГОЛОВОК</h3>
+							</div>
+						</div>
+						<div class="swiper-slide card">
+							<div class="card-text">
+								<h3>ЗАГОЛОВОК</h3>
+							</div>
+						</div>
+						<div class="swiper-slide card">
+							<div class="card-text">
+								<h3>ЗАГОЛОВОК</h3>
+							</div>
+						</div>
+						<div class="swiper-slide card">
+							<div class="card-text">
+								<h3>ЗАГОЛОВОК</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="popup close">
+		<div class="popup-overlay">
+			<div class="popup-wrapper wrapper flex">
+				<div class="callback-content flex">
+					<div class="callback-form-handler flex">
+						<h3 class="h3-header">Залиште заявку</h3>
+						<form action="telegram.php" method="POST" class="callback-form">
+							<label for="name" class="form-item form-item-label">Ім'я:</label>
+							<br>
+							<input type="text" id="name" name="name" class="form-item">
+							<p class="error-message" data-message-name></p>
+							<br>
+							<label for="telephone" class="form-item form-item-label">Номер телефону:</label>
+							<br>
+							<input type="tel" id="telephone" name="telephone" class="form-item">
+							<p class="error-message" data-message-phone></p>
+							<br>
+							<label for="category" class="form-item form-item-label">Оберіть категорію:</label>
+							<br>
+							<select name="category" id="category" class="form-item">
+								<option value="#">Не обрано</option>
+								<option value="A">A</option>
+								<option value="B">B</option>
+								<option value="C">C</option>
+							</select>
+							<p class="error-message" data-message-category></p>
+							<br>
+							<div class="transmission close">
+								<label for="transmission" class="form-item form-item-label">Оберіть тип КПП:</label>
+								<br>
+								<select name="transmission" id="transmission" class="form-item">
+									<option value="#">Не обрано</option>
+									<option value="manual">Механічна</option>
+									<option value="automatic">Автоматична</option>
+								</select>
+								<p class="error-message" data-message-transmission></p>
+							</div>
+							<br>
+							<button class="form-item">надіслати</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="categories-section flex">
+		<div class="categories-wrapper wrapper">
+			<div class="categories-header flex">
+				<h2 class="h2-header">Категорії</h2>
+			</div>
+			<div class="categories-tabs">
+				<div class="tabs-triggers flex">
+					<a href="#tab-1" class="tabs-triggers-item">
+						<h3 class="h3-header">категорія А</h3>
+					</a>
+					<a href="#tab-2" class="tabs-triggers-item">
+						<h3 class="h3-header">категорія B</h3>
+					</a>
+					<a href="#tab-3" class="tabs-triggers-item">
+						<h3 class="h3-header">категорія C</h3>
+					</a>
+				</div>
+				<div class="tabs-content">
+					<div class="tabs-content-item flex" id="tab-1">
+						<div class="tabs-image-wrapper image-1">
+						</div>
+						<div class="tabs-text-wrapper flex">
+							<p>опис категорії А</p>
+						</div>
+					</div>
+					<div class="tabs-content-item flex" id="tab-2">
+						<div class="tabs-image-wrapper image-2">
+						</div>
+						<div class="tabs-text-wrapper flex">
+							<p>опис категорії B</p>
+						</div>
+					</div>
+					<div class="tabs-content-item flex" id="tab-3">
+						<div class="tabs-image-wrapper image-3">
+						</div>
+						<div class="tabs-text-wrapper flex">
+							<p>опис категорії C</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="price-section flex">
+		<div class="price-wrapper wrapper">
+			<div class="price-header flex">
+				<h2 class="h2-header">Пакети</h2>
+			</div>
+			<div class="price flex">
+				<table class="desktop-table">
+					<tr>
+						<th></th>
+						<th><h3 class="h3-header">перший пакет</h3></th>
+						<th><h3 class="h3-header">другий пакет</h3></th>
+						<th><h3 class="h3-header">третій пакет</h3></th>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+						<td>інформація</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+						<td>інформація</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+						<td>інформація</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+						<td>інформація</td>
+						<td>інформація</td>
+					</tr>
+				</table>
+				<table class="mobile-table">
+					<tr><th colspan="2" class="thead"><h3 class="h3-header">перший пакет</h3></th></tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr><th colspan="2" class="thead"><h3 class="h3-header">другий пакет</h3></th></tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr><th colspan="2" class="thead"><h3 class="h3-header">третій пакет</h3></th></tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+					<tr>
+						<td>властивість</td>
+						<td>інформація</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section class="benefits-section flex" id="benefits">
+		<div class="benefits-wrapper wrapper">
+			<div class="benefits-header flex">
+				<h2 class="h2-header">Переваги</h2>
+			</div>
+			<div class="benefits-list">
+				<div class="benefits-item">
+					<img src="image.svg" alt="#" class="benefit-image">
+					<h3 class="h3-header">перевага</h3>
+					<p>розгорнутий опис переваги</p>
+				</div>
+				<div class="benefits-item">
+					<img src="image.svg" alt="#" class="benefit-image">
+					<h3 class="h3-header">перевага</h3>
+					<p>розгорнутий опис переваги</p>
+				</div>
+				<div class="benefits-item">
+					<img src="image.svg" alt="#" class="benefit-image">
+					<h3 class="h3-header">перевага</h3>
+					<p>розгорнутий опис переваги</p>
+				</div>
+				<div class="benefits-item">
+					<img src="image.svg" alt="#" class="benefit-image">
+					<h3 class="h3-header">перевага</h3>
+					<p>розгорнутий опис переваги</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="accordion-section flex" id="qa">
+		<div class="accordion-wrapper wrapper flex">
+			<div class="accordion-header flex">
+				<h2 class="h2-header">Часті питання</h2>
+			</div>
+			<div class="accordion-list">
+				<div class="accordion-item">
+					<div class="accordion-control flex">
+						<p class="accordion-question">чергове питання</p>
+						<div class="accordion-icon">
+							<div class="icon-wrapper"></div>
+						</div>
+					</div>
+					<div class="accordion-answer">
+						<p>чергова відповідь</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-control flex">
+						<p class="accordion-question">чергове питання</p>
+						<div class="accordion-icon">
+							<div class="icon-wrapper"></div>
+						</div>
+					</div>
+					<div class="accordion-answer">
+						<p>чергова відповідь</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-control flex">
+						<p class="accordion-question">чергове питання</p>
+						<div class="accordion-icon">
+							<div class="icon-wrapper"></div>
+						</div>
+					</div>
+					<div class="accordion-answer">
+						<p>чергова відповідь</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-control flex">
+						<p class="accordion-question">чергове питання</p>
+						<div class="accordion-icon">
+							<div class="icon-wrapper"></div>
+						</div>
+					</div>
+					<div class="accordion-answer">
+						<p>чергова відповідь</p>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-control flex">
+						<p class="accordion-question">чергове питання</p>
+						<div class="accordion-icon">
+							<div class="icon-wrapper"></div>
+						</div>
+					</div>
+					<div class="accordion-answer">
+						<p>чергова відповідь</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="button-section flex">
+		<button>зареєструватися</button>
+	</div>
+	<script src="burger.js" type="text/javascript"></script>
+	<script src="accordion.js" type="text/javascript"></script>
+	<script src="categories.js" type="text/javascript"></script>
+	<script src="script.js" type="text/javascript"></script>
+	<script src="phoneMask.js" type="text/javascript"></script>
+	<script src="popup.js" type="text/javascript"></script>
+	<script src="formValidator.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="swiper.js" type="text/javascript"></script>
+</body>
+</html>
