@@ -49,4 +49,5 @@ const phoneNumberFormatter = (event) => {
     input.value = formattedPhoneNumber;
 }
 const inputs = document.querySelectorAll('input[type="tel"]');
+console.log(inputs);
 inputs.forEach(element => element.addEventListener('input', phoneNumberFormatter));
